@@ -124,7 +124,7 @@ char Table()
 	printf("\n X. Az barname kharej sho ...");
 	while (choice != 'l' && choice != 'L' && choice != 'S' && choice != 's' && choice != '1' && choice != '2' && choice != 'a' && choice != 'A' && choice != 'B' &&
 			choice != 'b' && choice != 'c' && choice != 'C' && choice != 'd' && choice != 'D' && choice != 'E' && choice != 'e' && choice != 'X' && choice != 'x')
-		choice = _getch(); // ->choice = getch();
+		choice = getch(); // ->choice = getch();
 	system("cls"); //clear the screen
 	return choice;
 }
@@ -138,7 +138,7 @@ bool SaveLoadFile(char operationType) //operationType detemines the function mus
 	if (fn[0] == '\0')
 	{
 		printf("Incorrect file name ...\n\tAny key for returning to table...");
-		_getch();//getch();
+		getch();//getch();
 		return false;
 	}
 	for (; fn[endOfString] != '\0'; endOfString++);
@@ -157,7 +157,7 @@ bool SaveLoadFile(char operationType) //operationType detemines the function mus
 		printf("\n\nAn error occured while %s ...\nAny key for returning to the table ...",operationType == SAVE ? "Saving" : "Loading");
 	else
 		printf("\n\n%s was successful ... Any key to continue ...", operationType == SAVE ? "Saving" : "Loading");
-	_getch(); // ->getch();
+	getch(); // ->getch();
 	return result;
 }
 
@@ -184,7 +184,7 @@ void Copy(unsigned __int8 input[_H][_W][3],unsigned __int8 output[_H][_W][3],cha
 		system("cls");
 	printf("The operation was successful ...\nthe %s array copied to %s array\n\tAny key for returning to the table ...",
 		copyMode == INPUT_TO_OUTPUT ? "input" : "output" ,copyMode == INPUT_TO_OUTPUT ? "output" : "input");
-	_getch();//->getch();
+	getch();//->getch();
 	return;
 
 }
@@ -194,7 +194,7 @@ void AskForCopy()
 	printf("\n\nDo you want to perform the new actions on the new bitmap ?\n1)Yes, copy the photo2 to photo1\n2)No , dont't change photo1 ...");
 	char choice = '\0';
 	while (choice != '1' && choice != '2')
-		choice = _getch(); //-> choice = getch();
+		choice = getch(); //-> choice = getch();
 	if (choice == '1')
 	{
 		printf("\n");
@@ -203,7 +203,7 @@ void AskForCopy()
 	else
 	{
 		printf("\n\tOK ... Any key for returning to the table ...");
-		_getch(); //->getch();
+		getch(); //->getch();
 	}
 	return;
 }
