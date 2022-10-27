@@ -1,4 +1,4 @@
-# Console App Photo Editor
+# Console Photo Editor App
 * Convert image to different color scales, such as grey scale, brown scale, etc.
 * mirror images
 * Image enhancement
